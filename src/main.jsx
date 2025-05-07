@@ -1,9 +1,11 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { RouterProvider } from 'react-router-dom';
+import { router} from './router.jsx'
 import './assets/styles/main.scss';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <div>Hello ! welcome in the project KASA 👋</div>
+    <RouterProvider router={router} />
   </StrictMode>,
 );
