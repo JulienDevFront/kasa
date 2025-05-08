@@ -1,0 +1,19 @@
+@use '../utils/colors.scss' as colors;
+@use 'sass:map';
+/* 👨‍🎨 Here master painter 👋
+This file sets the foundational  styles for the application. It resets 
+margins and paddings, defines default box-sizing, and applies the base 
+font and text color globally.
+*/
+
+*,html, body {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: map.get(colors.$monochrome, '900');
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+};

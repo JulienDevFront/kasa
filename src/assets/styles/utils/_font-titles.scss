@@ -1,0 +1,51 @@
+@use './font-sizes.scss' as sizes;
+@use 'sass:map';
+/* 👨‍🎨 Here master painter 👋
+This file  defines title font  sizes for each page and  breakpoint. Values  are split 
+between desktop and mobile layouts to ensure optimal readability and visual hierarchy 
+across devices. Use the `size-title` mixin to apply responsive scaling via `clamp()`.
+*/
+
+$title-desktop: (
+    '/home-titleMain': sizes.$font-2xl,                 // HomePage
+    '/home-cards': sizes.$font-md,                      // HomePage
+    '/housing-titleMain': sizes.$font-xl,               // HousingPage
+    '/housing-localize': sizes.$font-md,                // HousingPage
+    '/housing-owner': sizes.$font-md,                   // HousingPage
+    '/housing-informations': sizes.$font-md,            // HousingPage
+    '/housing-tags': sizes.$font-sm,                    // HousingPage
+    '/about-titleMain': sizes.$font-2xl,                // AboutPage
+    '/about-sections': sizes.$font-lg,                  // AboutPage
+    '/error-titleMain': sizes.$font-4xl,                // ErrorPage
+    '/error-msgError': sizes.$font-xl,                  // ErrorPage
+    '/layout--footer-titleMain': sizes.$font-lg,        // Layout--footer
+)!default;
+
+$title-mobile: (
+    '/home-titleMain': sizes.$font-lg,                  // HomePage
+    '/home-cards': sizes.$font-md,                      // HomePage
+    '/housing-titleMain': sizes.$font-md,               // HousingPage            
+    '/housing-localize': sizes.$font-sm,                // HousingPage
+    '/housing-owner': sizes.$font-xs,                   // HousingPage
+    '/housing-informations': sizes.$font-xs,            // HousingPage
+    '/housing-tags': sizes.$font-2xs,                   // HousingPage
+    '/about-titleMain': sizes.$font-lg,                 // AboutPage
+    '/about-sections': sizes.$font-xs,                  // AboutPage
+    '/error-titleMain': sizes.$font-3xl,                // ErrorPage
+    '/error-msgError': sizes.$font-md,                  // ErrorPage
+    '/layout--footer-titleMain': sizes.$font-xs,        // Layout--footer
+)!default;
+
+/* 👨‍🎨 Here master painter 👋
+Generates  a responsive font-size  using `clamp()`, based  on a 
+minimum and maximum size and the viewport width range. Defaults 
+to 280px–1440px width scaling.
+*/
+@mixin size-title($min-size, $max-size, $min-vw: 280px, $max-vw: 1440px) {
+    font-size: clamp( 
+        $min-size, 
+        calc(#{$min-size} + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-vw}) / (#{$max-vw} - #{$min-vw}))), 
+        $max-size
+    );
+};
+  
