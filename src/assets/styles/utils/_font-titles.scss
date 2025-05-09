@@ -18,7 +18,6 @@ $title-desktop: (
     '/about-sections': sizes.$font-lg,                  // AboutPage
     '/error-titleMain': sizes.$font-4xl,                // ErrorPage
     '/error-msgError': sizes.$font-xl,                  // ErrorPage
-    '/layout--footer-titleMain': sizes.$font-lg,        // Layout--footer
 )!default;
 
 $title-mobile: (
@@ -33,7 +32,6 @@ $title-mobile: (
     '/about-sections': sizes.$font-xs,                  // AboutPage
     '/error-titleMain': sizes.$font-3xl,                // ErrorPage
     '/error-msgError': sizes.$font-md,                  // ErrorPage
-    '/layout--footer-titleMain': sizes.$font-xs,        // Layout--footer
 )!default;
 
 /* 👨‍🎨 Here master painter 👋

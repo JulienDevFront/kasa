@@ -1,0 +1,12 @@
+@use '../assets/styles/utils/font-sizes.scss' as sizes;
+
+.Nav {
+    width: 25%;
+    ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        font-size: sizes.$font-lg;
+        font-weight: 500;
+    }
+}
