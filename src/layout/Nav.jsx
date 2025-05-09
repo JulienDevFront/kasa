@@ -1,7 +1,6 @@
 import style from './Nav.module.scss';
 
 export default function Header(){
-
     return (
         <nav className={style.Nav}>
             <ul>
