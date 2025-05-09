@@ -1,10 +1,19 @@
 import HeroHeader from '../components/HeroHeader.jsx';
+import HouseCard from '../components/HouseCard.jsx';
 import style from './HomePage.module.scss';
 
 export default function HomePage() {
     return (
-        <div className={style}>
-            <HeroHeader/>
+        <div className={style.HomePage}>
+            <HeroHeader imgPath='rockyBeach.jpg'/>
+            <main>
+                <HouseCard houseTitle='Name of the house' houseImg='none' houseLink='none'/>
+                <HouseCard houseTitle='Name of the house' houseImg='none' houseLink='none'/>
+                <HouseCard houseTitle='Name of the house' houseImg='none' houseLink='none'/>
+                <HouseCard houseTitle='Name of the house' houseImg='none' houseLink='none'/>
+                <HouseCard houseTitle='Name of the house' houseImg='none' houseLink='none'/>
+                <HouseCard houseTitle='Name of the house' houseImg='none' houseLink='none'/>
+            </main>
         </div>
     );
 };
