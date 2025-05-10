@@ -1,0 +1,32 @@
+@use '../assets/styles/utils/colors.scss' as colors;
+@use '../assets/styles/utils/font-sizes.scss' as sizes;
+@use '../assets/styles/utils/font-titles.scss' as font-sizes;
+@use 'sass:map';
+
+.ErrorPage {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 140px;
+    padding: 140px;
+
+    h1 {
+        font-weight: 700;
+        font-size: map.get(font-sizes.$title-desktop, '/error-titleMain');
+        color : colors.$primary;
+    }
+
+    h2 {
+        font-weight: 500;
+        font-size: map.get(font-sizes.$title-desktop, '/error-msgError');
+        color : colors.$primary;
+    }
+    
+    a {
+        font-weight: 500;
+        font-size: sizes.$font-md;
+        text-decoration: underline;
+    }
+}
