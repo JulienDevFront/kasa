@@ -1,11 +1,32 @@
+import { NavLink } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import style from './Nav.module.scss';
 
-export default function Header(){
+export default function Nav(){
+    const routes = [
+        {
+            path: '/',
+            name: 'Accueil'
+        }, {
+            path: '/About',
+            name: 'A Propos'
+        }
+    ];
+
+    const location = useLocation();
+
     return (
         <nav className={style.Nav}>
             <ul>
-                <li><a>Accueil</a></li>
-                <li><a>A Propos</a></li>
+                { routes.map(route => 
+                    <li key={route.path}>
+                        <NavLink 
+                            to={route.path} 
+                            className={ location.pathname === route.path ? style.isActive : ''}>
+                                {route.name}
+                        </NavLink>
+                    </li>
+                )}
             </ul>
         </nav>
     )

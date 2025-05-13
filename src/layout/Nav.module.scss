@@ -1,4 +1,6 @@
 @use '../assets/styles/utils/font-sizes.scss' as sizes;
+@use '../assets/styles/utils/colors.scss' as colors;
+@use 'sass:map';
 
 .Nav {
     width: 25%;
@@ -8,5 +10,9 @@
         justify-content: space-between;
         font-size: sizes.$font-lg;
         font-weight: 500;
+
+        li a.isActive {
+            border-bottom: 2px solid map.get(colors.$monochrome, '900');
+        }
     }
 }
