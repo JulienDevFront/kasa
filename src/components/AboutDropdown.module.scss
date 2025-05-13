@@ -3,8 +3,8 @@
 @use '../assets/styles/utils/font-titles.scss' as font-titles;
 @use 'sass:map';
 
-.AboutSection {
-    padding: 38px 200px;
+.AboutDropdown {
+    padding: 30px 200px 0px 200px;
     div {
         display: flex;
         justify-content: space-between;
@@ -16,16 +16,29 @@
             font-weight: 700;
             font-size: map.get(font-titles.$title-desktop, '/about-sections');
             color: map.get(colors.$monochrome, '100');
-    
         }
-        img{}
+        img {
+            cursor: pointer;
+            transform: rotate(0deg);
+            transition: transform 0.4s ease-in-out;
+            &.rotateActive {
+                transform: rotate(180deg);
+            }
+        }
     }
     p {
-        padding: 20px;
+        opacity: 0;
+        height: 0px;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
         background-color: map.get(colors.$monochrome, '200');
         font-weight: 400;
         font-size: sizes.$font-md;
+    }
+    .isVisible {
+        height: auto; 
+        padding: 20px;
+        opacity: 1;
+        transition: height 0.4s ease-in-out, opacity 0.6s ease-in-out;
     }
 }
