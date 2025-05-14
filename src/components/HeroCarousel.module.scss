@@ -1,0 +1,34 @@
+@use '../assets/styles/utils/font-sizes.scss' as sizes;
+@use '../assets/styles/utils/colors.scss' as colors;
+@use 'sass:map';
+
+.HeroCarousel {
+    position: relative;
+    width: 100%;
+    height: 415px;
+    padding: 45px 100px 0px 100px;
+    border-radius: 25px;
+    background-color: gray;
+
+    .HeroCarousel__utils {
+        position: absolute;
+        inset: 0%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .positionCount{
+            position: absolute;
+            bottom: 0%;
+            right: 50%;
+            transform: translateX(50%);
+            padding: 24px;
+            font-weight: 500;
+            font-size: sizes.$font-md;
+            color: map.get(colors.$monochrome, '100');
+        }
+        .rightAction, .leftAction {
+            padding: 24px;
+        }
+    }
+} 

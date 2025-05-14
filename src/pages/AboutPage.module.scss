@@ -3,7 +3,10 @@
     flex-direction: column;
     flex: 1;
 
-    main {
-        padding-bottom: 38px;
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 38px 100px;
     }
 }

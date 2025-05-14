@@ -7,7 +7,7 @@ export default function AboutDropdown({titleSection, textSection}){
     const dropdownHandle = () => { setIsOpen(isOpen => !isOpen)};
 
     return (
-        <section className={style.AboutDropdown} >
+        <article className={style.AboutDropdown} >
             <div>
                 <h2>{titleSection}</h2>
                 <img 
@@ -20,6 +20,6 @@ export default function AboutDropdown({titleSection, textSection}){
             <p className={isOpen ? style.isVisible : ''}>
                 {textSection}
             </p>
-        </section>
+        </article>
     )
 }

@@ -8,7 +8,7 @@ export default function HomePage() {
     return (
         <div className={style.HomePage}>
             <HeroHeader title='Chez vous, partout et ailleurs' imgPath='rockyBeach.jpg' />
-            <main>
+            <div>
                 {housingDatas.map(data => 
                     <HouseCard 
                         key={data.id} 
@@ -17,7 +17,7 @@ export default function HomePage() {
                         houseLink={`/housing?id=${data.id}`} 
                     />
                 )}
-            </main>
+            </div>
         </div>
     );
 };

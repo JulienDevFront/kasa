@@ -7,7 +7,9 @@ export default function App(){
     return (
         <div className={style.App}>
             <Header displayNav={ true }/>
-            <Outlet/>
+            <main>
+                <Outlet/>   
+            </main>
             <Footer />
         </div>
     )

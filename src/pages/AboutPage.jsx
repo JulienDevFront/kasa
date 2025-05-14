@@ -8,7 +8,7 @@ export default function AboutPage() {
     return (
         <div className={style.AboutPage}>
             <HeroHeader title={null} imgPath='mountainRiver.jpg'/>
-            <main>
+            <section>
                 { aboutDatas.map(data => 
                     <AboutDropdown 
                         key={data.id} 
@@ -16,7 +16,7 @@ export default function AboutPage() {
                         textSection={data.description} 
                     />
                 )}
-            </main>
+            </section>
         </div>
     );
 };

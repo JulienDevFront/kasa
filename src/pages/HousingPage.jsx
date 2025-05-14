@@ -1,7 +1,9 @@
 import style from './HousingPage.module.scss';
-
+import HeroCarousel from '../components/HeroCarousel.jsx';
 export default function HousingPage() {
     return (
-        <p className={style}>HousingPage</p>
+        <div className={style}>
+            <HeroCarousel />
+        </div>
     );
 };

@@ -2,12 +2,14 @@
 @use 'sass:map';
 
 .HomePage {
-    main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    div {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(clamp(280px, 340px, 400px), 1fr));
         gap: 2rem;
         justify-items: center;
-        margin: 44px 100px;
         padding: 50px;
         border-radius: 25px;
         background-color: map.get(colors.$monochrome, '300');
