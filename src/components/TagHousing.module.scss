@@ -1,0 +1,7 @@
+@use '../assets/styles/utils/colors.scss' as colors;
+
+.HousingPage {
+    padding: 2px 40px;
+    border-radius: 10px;
+    background-color: colors.$primary;
+}
