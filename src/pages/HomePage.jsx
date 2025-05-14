@@ -3,7 +3,6 @@ import HeroHeader from '../components/HeroHeader.jsx';
 import HouseCard from '../components/HouseCard.jsx';
 import housingDatas from '../data/housingDatas.json';
 
-
 export default function HomePage() {
     
     return (

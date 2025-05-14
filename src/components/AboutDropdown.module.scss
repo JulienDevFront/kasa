@@ -28,7 +28,9 @@
     }
     p {
         opacity: 0;
-        height: 0px;
+        max-height: 0px;
+        transform: scaleY(0);
+        transform-origin: top;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
         background-color: map.get(colors.$monochrome, '200');
@@ -36,9 +38,10 @@
         font-size: sizes.$font-md;
     }
     .isVisible {
-        height: auto; 
-        padding: 20px;
         opacity: 1;
-        transition: height 0.4s ease-in-out, opacity 0.6s ease-in-out;
+        max-height: 400px;
+        padding: 20px;
+        transform: scaleY(1);
+        transition: transform 0.4s ease-in-out, opacity 0.6s ease-in-out;
     }
 }
