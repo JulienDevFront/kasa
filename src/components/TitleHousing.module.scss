@@ -1,0 +1,15 @@
+@use '../assets/styles/utils/font-titles.scss' as font-titles;
+@use '../assets/styles/utils/colors.scss' as colors;
+@use 'sass:map';
+
+.TitleHousing {
+    h1 {
+        font-weight: 500;
+        font-size: map.get(font-titles.$title-desktop, '/housing-titleMain');
+        color: colors.$primary;
+    }
+    h2 {
+        font-weight: 500;
+        font-size: map.get(font-titles.$title-desktop, '/housing-localize');
+    }
+}
