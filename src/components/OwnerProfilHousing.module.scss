@@ -1,0 +1,24 @@
+@use '../assets/styles/utils/font-titles.scss' as font-titles;
+@use '../assets/styles/utils/colors.scss' as colors;
+@use 'sass:map';
+
+.OwnerProfilHousing {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    h3 {
+        font-size: map.get(font-titles.$title-desktop, '/housing-owner');
+        span{
+            display: block;
+            color: colors.$primary;
+            font-weight: 500;
+        }
+    }
+    img {
+        width: 64px;
+        height: 64px;
+        border-radius: 32px;
+        background-color: gray;
+    }
+}

@@ -1,0 +1,7 @@
+.HousingPage {
+    & > div {
+        display: flex;
+        justify-content: space-between;
+        align-content: end;
+    }
+}
