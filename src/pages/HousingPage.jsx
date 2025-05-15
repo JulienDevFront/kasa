@@ -6,11 +6,12 @@ import TagHousing from '../components/TagHousing.jsx';
 import OwnerProfilHousing from '../components/OwnerProfilHousing.jsx';
 import RatingScore from '../components/RatingScore.jsx';
 import Dropdown from '../components/Dropdown.jsx';
+import DropdownList from '../components/DropdownList.jsx';
 import { useParams } from 'react-router-dom';
 import housingDatas from '../data/housingDatas.json';
 
 export default function HousingPage() {
-    let idParams = useParams().id;
+    const idParams = useParams().id;
     const data = housingDatas.find(item => item.id === idParams);
 
     return (
@@ -32,7 +33,7 @@ export default function HousingPage() {
             </section>
             <div className={style.HousingPage__descriptionAndEquipment}>
                 <Dropdown titleSection='Description' textSection={data.description}/>
-                <Dropdown titleSection='Équipements' textSection={data.equipments}/>
+                <DropdownList title='Équipements' lists={data.equipments}/>
             </div>
         </div>
     );
