@@ -1,5 +1,6 @@
 import style from './HousingPage.module.scss';
 import HeroCarousel from '../components/HeroCarousel.jsx';
+import Slide from '../components/Slide.jsx';
 import TitleHousing from '../components/TitleHousing.jsx';
 import TagHousing from '../components/TagHousing.jsx';
 import OwnerProfilHousing from '../components/OwnerProfilHousing.jsx';
@@ -11,11 +12,12 @@ import housingDatas from '../data/housingDatas.json';
 export default function HousingPage() {
     let idParams = useParams().id;
     const data = housingDatas.find(item => item.id === idParams);
-    console.log(data)
 
     return (
         <div className={style.HousingPage}>
-            <HeroCarousel />
+            <HeroCarousel>
+                { data.pictures.map((item, currentIndex) => <Slide key={currentIndex} img={item} alt={`Housing picture of ${data.title}`}/>)}
+            </HeroCarousel>
             <section>
                 <div className={style.HousingPage__titleAndTags}>
                     <TitleHousing titleMain={data.title} titleLocalize={data.location}/>
