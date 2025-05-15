@@ -3,6 +3,7 @@ import HeroCarousel from '../components/HeroCarousel.jsx';
 import TitleHousing from '../components/TitleHousing.jsx';
 import TagHousing from '../components/TagHousing.jsx';
 import OwnerProfilHousing from '../components/OwnerProfilHousing.jsx';
+import RatingScore from '../components/RatingScore.jsx';
 
 export default function HousingPage() {
     return (
@@ -18,6 +19,7 @@ export default function HousingPage() {
             </div>
             <div>
                 <OwnerProfilHousing ownerName={'blabla'} ownerLastName={'blabla'} />
+                <RatingScore score={2}/>
             </div>
         </div>
     );

@@ -1,0 +1,11 @@
+.RatingScore {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2px;
+
+    img {
+        width: 24px;
+        height: 24px;
+    }
+}
