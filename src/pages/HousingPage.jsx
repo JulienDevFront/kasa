@@ -5,8 +5,12 @@ import TagHousing from '../components/TagHousing.jsx';
 import OwnerProfilHousing from '../components/OwnerProfilHousing.jsx';
 import RatingScore from '../components/RatingScore.jsx';
 import Dropdown from '../components/Dropdown.jsx';
+import { useParams } from 'react-router-dom';
 
 export default function HousingPage() {
+    let urlParams = useParams();
+    console.log(urlParams.id);
+
     return (
         <div className={style.HousingPage}>
             <HeroCarousel />
@@ -21,7 +25,7 @@ export default function HousingPage() {
                 </div>
                 <div className={style.HousingPage__ownerAndRating}>
                     <OwnerProfilHousing ownerName={'blabla'} ownerLastName={'blabla'} />
-                    <RatingScore score={2}/>
+                    <RatingScore score={4}/>
                 </div>
             </section>
             <div className={style.HousingPage__descriptionAndEquipment}>

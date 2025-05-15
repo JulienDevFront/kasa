@@ -14,7 +14,7 @@ export default function HomePage() {
                         key={data.id} 
                         houseTitle={data.title} 
                         houseImg={data.cover} 
-                        houseLink={`/housing?id=${data.id}`} 
+                        houseLink={`/housing/${data.id}`} 
                     />
                 )}
             </div>
