@@ -3,6 +3,8 @@
 @use 'sass:map';
 
 .TitleHousing {
+    display: flex;
+    flex-direction: column;
     h1 {
         font-weight: 500;
         font-size: map.get(font-titles.$title-desktop, '/housing-titleMain');

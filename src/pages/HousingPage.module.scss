@@ -1,7 +1,30 @@
-.HousingPage {
-    & > div {
+.HousingPage{
+    section {
         display: flex;
         justify-content: space-between;
-        align-content: end;
     }
+}
+
+.HousingPage__titleAndTags{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &__tags{
+        display: flex;
+        gap: 10px;
+    }
+}
+
+.HousingPage__ownerAndRating{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+    
+.HousingPage__descriptionAndEquipment{
+    margin-top: 24px;
+    display: flex;
+    gap: 4%;
 }

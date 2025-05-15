@@ -3,7 +3,8 @@
 @use '../assets/styles/utils/font-titles.scss' as font-titles;
 @use 'sass:map';
 
-.AboutDropdown {
+.Dropdown {
+    width: 100%;
     div {
         display: flex;
         justify-content: space-between;

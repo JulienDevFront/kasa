@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import style from './AboutDropdown.module.scss';
+import style from './Dropdown.module.scss';
 
-export default function AboutDropdown({titleSection, textSection}){
+export default function Dropdown({titleSection, textSection}){
     
     const [isOpen, setIsOpen] = useState(false);
     const dropdownHandle = () => { setIsOpen(isOpen => !isOpen)};
 
     return (
-        <article className={style.AboutDropdown} >
+        <article className={style.Dropdown} >
             <div>
                 <h2>{titleSection}</h2>
                 <img 

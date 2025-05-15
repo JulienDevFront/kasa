@@ -1,6 +1,6 @@
 import style from './AboutPage.module.scss';
 import HeroHeader from '../components/HeroHeader.jsx';
-import AboutDropdown from '../components/AboutDropdown.jsx';
+import Dropdown from '../components/Dropdown.jsx';
 import aboutDatas from '../data/aboutDatas.json'; 
 
 export default function AboutPage() {
@@ -10,7 +10,7 @@ export default function AboutPage() {
             <HeroHeader title={null} imgPath='mountainRiver.jpg'/>
             <section>
                 { aboutDatas.map(data => 
-                    <AboutDropdown 
+                    <Dropdown 
                         key={data.id} 
                         titleSection={data.title} 
                         textSection={data.description} 

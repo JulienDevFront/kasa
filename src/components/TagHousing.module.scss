@@ -1,7 +1,14 @@
 @use '../assets/styles/utils/colors.scss' as colors;
+@use '../assets/styles/utils/font-titles.scss' as font-titles;
+@use 'sass:map';
 
 .HousingPage {
-    padding: 2px 40px;
+    width: 115px;
+    padding: 2px;
     border-radius: 10px;
     background-color: colors.$primary;
+    text-align: center;
+    font-weight: 700;
+    font-size: map.get(font-titles.$title-desktop, '/housing-tags');
+    color: map.get(colors.$monochrome, '100');
 }
