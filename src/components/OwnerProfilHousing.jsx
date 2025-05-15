@@ -1,13 +1,13 @@
 import style from './OwnerProfilHousing.module.scss';
 
-export default function OwnerProfilHousing({ownerName, ownerLastName, ownerImg}){
+export default function OwnerProfilHousing({hostName, hostPicture}){
     return (
         <section className={ style.OwnerProfilHousing}>
             <h3>
-                <span>{ownerName}</span>
-                <span>{ownerLastName}</span>
+                <span>{hostName}</span>
+                <span>{hostName}</span>
             </h3>
-            <img src={ownerImg} alt={`${ownerName}+' '+${ownerLastName}`} />
+            <img src={hostPicture} alt={`Photo profile of ${hostName}`} />
         </section>
     )
 }

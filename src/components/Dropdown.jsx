@@ -1,5 +1,6 @@
-import { useState } from 'react';
 import style from './Dropdown.module.scss';
+import arrowIcon from '../assets/images/icons/arrow-dropdown-24px.svg';
+import { useState } from 'react';
 
 export default function Dropdown({titleSection, textSection}){
     
@@ -13,7 +14,7 @@ export default function Dropdown({titleSection, textSection}){
                 <img 
                     onClick={dropdownHandle} 
                     className={isOpen ? style.rotateActive : ''} 
-                    src="./src/assets/images/icons/arrow-dropdown-24px.svg" 
+                    src={arrowIcon}
                     alt={`Open to the descrition of ${titleSection}`} 
                 />
             </div>

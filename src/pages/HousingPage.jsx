@@ -6,31 +6,31 @@ import OwnerProfilHousing from '../components/OwnerProfilHousing.jsx';
 import RatingScore from '../components/RatingScore.jsx';
 import Dropdown from '../components/Dropdown.jsx';
 import { useParams } from 'react-router-dom';
+import housingDatas from '../data/housingDatas.json';
 
 export default function HousingPage() {
-    let urlParams = useParams();
-    console.log(urlParams.id);
+    let idParams = useParams().id;
+    const data = housingDatas.find(item => item.id === idParams);
+    console.log(data)
 
     return (
         <div className={style.HousingPage}>
             <HeroCarousel />
             <section>
                 <div className={style.HousingPage__titleAndTags}>
-                    <TitleHousing titleMain={'blablablabla'} titleLocalize={'blablablabla blablablabla blablablabla'}/>
+                    <TitleHousing titleMain={data.title} titleLocalize={data.location}/>
                     <div className={style.HousingPage__titleAndTags__tags}>
-                        <TagHousing tagName={'tag name'}/>
-                        <TagHousing tagName={'tag name'}/>
-                        <TagHousing tagName={'tag name'}/>
+                        {data.tags.map((tag, index) => <TagHousing key={index} tagName={tag}/>)}
                     </div>
                 </div>
                 <div className={style.HousingPage__ownerAndRating}>
-                    <OwnerProfilHousing ownerName={'blabla'} ownerLastName={'blabla'} />
-                    <RatingScore score={4}/>
+                    <OwnerProfilHousing hostName={data.host.name} hostPicture={data.host.picture} />
+                    <RatingScore score={data.rating}/>
                 </div>
             </section>
             <div className={style.HousingPage__descriptionAndEquipment}>
-                <Dropdown titleSection={'blabla'} textSection={'blabla'}/>
-                <Dropdown titleSection={'blabla'} textSection={'blabla'}/>
+                <Dropdown titleSection='Description' textSection={data.description}/>
+                <Dropdown titleSection='Équipements' textSection={data.equipments}/>
             </div>
         </div>
     );
