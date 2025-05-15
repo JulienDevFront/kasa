@@ -19,7 +19,7 @@ export default function DropdownList({title, lists}){
                 />
             </header>
             <ul className={isOpen ? style.isVisible : ''}>
-                {lists.map(list => <li>{list}</li>)}
+                {lists.map((list, currentIndex) => <li key={currentIndex}>{list}</li>)}
             </ul>
         </article>
     )
