@@ -11,13 +11,13 @@ import { useParams } from 'react-router-dom';
 import housingDatas from '../data/housingDatas.json';
 
 export default function HousingPage() {
-    const idParams = useParams().id;
-    const data = housingDatas.find(item => item.id === idParams);
+    const { id } = useParams();
+    const data = housingDatas.find(item => item.id === id);
 
     return (
         <div className={style.HousingPage}>
             <HeroCarousel>
-                { data.pictures.map((item, currentIndex) => <Slide key={currentIndex} img={item} alt={`Housing picture of ${data.title}`}/>)}
+                { data.pictures.map((item) => <Slide key={item} img={item} alt={`Housing picture of ${data.title}`}/>)}
             </HeroCarousel>
             <section>
                 <div className={style.HousingPage__titleAndTags}>
