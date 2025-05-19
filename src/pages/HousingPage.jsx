@@ -17,7 +17,7 @@ export default function HousingPage() {
     return (
         <div className={style.HousingPage}>
             <HeroCarousel>
-                { data.pictures.map((item) => <Slide key={item} img={item} alt={`Housing picture of ${data.title}`}/>)}
+                {data.pictures.map((item) => <Slide key={item} img={item} alt={`Housing picture of ${data.title}`}/>)}
             </HeroCarousel>
             <section>
                 <div className={style.HousingPage__titleAndTags}>
