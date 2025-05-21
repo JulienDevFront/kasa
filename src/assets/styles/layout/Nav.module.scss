@@ -24,7 +24,7 @@
     .Nav ul {
         font-size: sizes.$font-xs;
         li {
-            margin-left: 1.625rem;
+            margin-left: clamp(6px, 4vw, 26px);
             a.isActive {
                 border-bottom: 1px solid map.get(colors.$monochrome, '900');
             }

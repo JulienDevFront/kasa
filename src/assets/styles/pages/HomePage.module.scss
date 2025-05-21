@@ -1,17 +1,43 @@
 @use '../utils/colors.scss' as colors;
+@use '../utils/media-queries.scss' as media-queries;
 @use 'sass:map';
 
 .HomePage {
     display: flex;
     flex-direction: column;
-    gap: 50px;
     div {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(clamp(280px, 340px, 400px), 1fr));
-        gap: 2rem;
-        justify-items: center;
+        height: auto;
+        margin-top: 50px;
         padding: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(50px, 1vw, 60px);
+        justify-items: center;
         border-radius: 25px;
         background-color: map.get(colors.$monochrome, '300');
     }
+}
+
+@include media-queries.media-queries-laptop() {
+    .HomePage div {
+        margin-top: 27px;
+        padding: 20px;
+        display: grid;
+        gap: 20px;
+        border-radius: 10px;
+    }
+}
+
+@include media-queries.media-queries-mobile() {
+    .HomePage {
+        div {
+            grid-template-columns: repeat(1, 1fr);
+            margin-top: 22px;
+            padding: 0px;
+            display: grid;
+            gap: 20px;
+            border-radius: 10px;
+            background-color: map.get(colors.$monochrome, '100');
+        }
+    } 
 }
