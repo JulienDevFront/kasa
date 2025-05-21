@@ -1,0 +1,26 @@
+@use './media-breakpoints.scss' as breakpoints;
+@use 'sass:map';
+
+@mixin media-queries-desktop(
+    $min: map.get(breakpoints.$desktop-landscape, 'min'), 
+    $max: map.get(breakpoints.$desktop-landscape, 'max')) {
+  @media only screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin media-queries-laptop(
+    $min: map.get(breakpoints.$laptop-landscape, 'min'), 
+    $max: map.get(breakpoints.$laptop-landscape, 'max')) {
+  @media only screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin media-queries-mobile(
+    $min: map.get(breakpoints.$mobile-landscape, 'min'), 
+    $max: map.get(breakpoints.$mobile-landscape, 'max')) {
+  @media only screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
