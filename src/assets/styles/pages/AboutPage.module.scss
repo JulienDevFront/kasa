@@ -1,7 +1,8 @@
+@use '../utils/media-queries.scss' as media-queries;
+
 .AboutPage {
     display: flex;
     flex-direction: column;
-    flex: 1;
 
     section {
         display: flex;
@@ -9,4 +10,18 @@
         gap: 30px;
         padding: 38px 100px;
     }
-}
+};
+
+@include media-queries.media-queries-laptop() {
+    .AboutPage section {
+        gap: 20px;
+        padding: 26px 50px;
+    }
+};
+
+@include media-queries.media-queries-mobile() {
+    .AboutPage section {
+        gap: 20px;
+        padding: 20px 0px;
+    }
+};
