@@ -1,18 +1,33 @@
 @use '../utils/font-sizes.scss' as sizes;
 @use '../utils/colors.scss' as colors;
+@use '../utils/media-queries.scss' as media-queries;
 @use 'sass:map';
 
 .Nav {
-    width: 25%;
+    display: flex;
+    justify-items: flex-end;
+    flex-wrap: nowrap;
     ul {
         display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
         font-size: sizes.$font-lg;
         font-weight: 500;
+        li {
+            margin-left: 3.625rem;
+            a.isActive {
+                border-bottom: 2px solid map.get(colors.$monochrome, '900');
+            }
+        }
+    }
+}
 
-        li a.isActive {
-            border-bottom: 2px solid map.get(colors.$monochrome, '900');
+@include media-queries.media-queries-mobile() {
+    .Nav ul {
+        font-size: sizes.$font-xs;
+        li {
+            margin-left: 1.625rem;
+            a.isActive {
+                border-bottom: 1px solid map.get(colors.$monochrome, '900');
+            }
         }
     }
 }
