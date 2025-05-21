@@ -21,18 +21,18 @@ export default function HousingPage() {
             </HeroCarousel>
             <section>
                 <div className={style.HousingPage__titleAndTags}>
-                    <TitleHousing titleMain={data.title} titleLocalize={data.location}/>
+                    <TitleHousing title={data.title} localize={data.location}/>
                     <div className={style.HousingPage__titleAndTags__tags}>
-                        {data.tags.map((tag, index) => <TagHousing key={index} tagName={tag}/>)}
+                        {data.tags.map((tag, index) => <TagHousing key={index} name={tag}/>)}
                     </div>
                 </div>
                 <div className={style.HousingPage__ownerAndRating}>
                     <OwnerProfilHousing hostName={data.host.name} hostPicture={data.host.picture} />
-                    <RatingScore score={data.rating}/>
+                    <RatingScore rating={data.rating}/>
                 </div>
             </section>
             <div className={style.HousingPage__descriptionAndEquipment}>
-                <Dropdown titleSection='Description' textSection={data.description}/>
+                <Dropdown title='Description' text={data.description}/>
                 <DropdownList title='Équipements' lists={data.equipments}/>
             </div>
         </div>
