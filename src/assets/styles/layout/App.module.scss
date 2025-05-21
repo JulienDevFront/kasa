@@ -1,8 +1,13 @@
+@use '../utils//media-breakpoints.scss' as breakpoints;
+@use 'sass:map';
+
+
 .App {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    max-width: map.get(breakpoints.$desktop-landscape, 'max');
+    min-width: map.get(breakpoints.$mobile-landscape, 'min');
     min-height: 100vh;
 
     main {
