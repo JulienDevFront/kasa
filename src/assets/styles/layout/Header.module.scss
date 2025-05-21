@@ -12,6 +12,12 @@
     }
 };
 
+@include media-queries.media-queries-laptop() {
+    .Header {
+        padding: 20px 40px 0px 40px;
+    }
+};
+
 @include media-queries.media-queries-mobile() {
     .Header {
         padding: 20px 20px 0px 20px;
