@@ -13,8 +13,8 @@ export default function AboutPage() {
                 { aboutDatas.map(data => 
                     <Dropdown 
                         key={data.id} 
-                        titleSection={data.title} 
-                        textSection={data.description} 
+                        title={data.title} 
+                        text={data.description} 
                     />
                 )}
             </section>
