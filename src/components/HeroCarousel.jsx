@@ -1,9 +1,10 @@
-import style from './HeroCarousel.module.scss';
+import style from '../assets/styles/components/HeroCarousel.module.scss';
 import arrowLeftCarousel from '../assets/images/icons/arrow-left-carousel.svg';
 import arrowRightCarousel from '../assets/images/icons/arrow-right-carousel.svg';
 import { useState } from 'react';
 
 export default function HeroCarousel({ children }) {
+    
     const [currentIndex, setCurrentIndex] = useState(0);
     const slides = children.length;
 

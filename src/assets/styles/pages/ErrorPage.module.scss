@@ -1,6 +1,6 @@
-@use '../assets/styles/utils/colors.scss' as colors;
-@use '../assets/styles/utils/font-sizes.scss' as sizes;
-@use '../assets/styles/utils/font-titles.scss' as font-sizes;
+@use '../utils/colors.scss' as colors;
+@use '../utils/font-sizes.scss' as sizes;
+@use '../utils/font-titles.scss' as font-sizes;
 @use 'sass:map';
 
 .ErrorPage {

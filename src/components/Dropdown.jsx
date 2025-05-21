@@ -1,8 +1,8 @@
-import style from './Dropdown.module.scss';
+import style from '../assets/styles/components/Dropdown.module.scss';
 import arrowIcon from '../assets/images/icons/arrow-dropdown-24px.svg';
 import { useState } from 'react';
 
-export default function Dropdown({titleSection, textSection}){
+export default function Dropdown({title, text}){
     
     const [isOpen, setIsOpen] = useState(false);
     const dropdownHandle = () => { setIsOpen(isOpen => !isOpen)};
@@ -10,16 +10,16 @@ export default function Dropdown({titleSection, textSection}){
     return (
         <article className={style.Dropdown} >
             <div>
-                <h2>{titleSection}</h2>
+                <h2>{title}</h2>
                 <img 
                     onClick={dropdownHandle} 
                     className={isOpen ? style.rotateActive : ''} 
                     src={arrowIcon}
-                    alt={`Open to the descrition of ${titleSection}`} 
+                    alt={`Open to the descrition of ${title}`} 
                 />
             </div>
             <p className={isOpen ? style.isVisible : ''}>
-                {textSection}
+                {text}
             </p>
         </article>
     )

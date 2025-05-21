@@ -1,4 +1,4 @@
-import style from './ErrorPage.module.scss';
+import style from '../assets/styles/pages/ErrorPage.module.scss';
 import Header from '../layout/Header.jsx';
 import Footer from '../layout/Footer.jsx';
 import { NavLink } from 'react-router-dom';

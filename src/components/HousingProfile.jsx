@@ -1,11 +1,11 @@
-import style from './OwnerProfilHousing.module.scss';
+import style from '../assets/styles/components/HousingProfile.module.scss';
 
-export default function OwnerProfilHousing({hostName, hostPicture}){
+export default function HousingProfile({hostName, hostPicture}){
     const name = hostName.split(' ')[0];
     const lastName = hostName.split(' ')[1];
 
     return (
-        <section className={ style.OwnerProfilHousing}>
+        <section className={ style.HousingProfile}>
             <h3>
                 <span>{name}</span>
                 <span>{lastName}</span>

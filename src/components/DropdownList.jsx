@@ -1,4 +1,4 @@
-import style from './DropdownList.module.scss';
+import style from '../assets/styles/components/DropdownList.module.scss';
 import arrowIcon from '../assets/images/icons/arrow-dropdown-24px.svg';
 import { useState } from 'react';
 

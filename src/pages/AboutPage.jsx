@@ -1,4 +1,4 @@
-import style from './AboutPage.module.scss';
+import style from '../assets/styles/pages/AboutPage.module.scss';
 import HeroHeader from '../components/HeroHeader.jsx';
 import Dropdown from '../components/Dropdown.jsx';
 import aboutDatas from '../data/aboutDatas.json'; 

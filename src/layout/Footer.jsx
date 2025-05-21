@@ -1,4 +1,4 @@
-import style from './Footer.module.scss';
+import style from '../assets/styles/layout/Footer.module.scss';
 import logo from '../assets/images/icons/logo-desktop-white.svg';
 
 

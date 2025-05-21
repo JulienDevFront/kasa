@@ -1,4 +1,4 @@
-import style from './HeroHeader.module.scss';
+import style from '../assets/styles/components/HeroHeader.module.scss';
 
 export default function HeroHeader({title = null, imgPath}){
     return (

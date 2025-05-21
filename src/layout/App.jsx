@@ -1,7 +1,7 @@
-import style from './App.module.scss';
-import { Outlet } from 'react-router-dom';
+import style from '../assets/styles/layout/App.module.scss';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
+import { Outlet } from 'react-router-dom';
 
 export default function App(){
     return (

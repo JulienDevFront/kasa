@@ -1,11 +1,11 @@
-@use '../assets/styles/utils/colors.scss' as colors;
-@use '../assets/styles/utils/font-sizes.scss' as sizes;
-@use '../assets/styles/utils/font-titles.scss' as font-titles;
+@use '../utils/colors.scss' as colors;
+@use '../utils/font-sizes.scss' as sizes;
+@use '../utils/font-titles.scss' as font-titles;
 @use 'sass:map';
 
-.DropdownList {
+.Dropdown {
     width: 100%;
-    header {
+    div {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -26,7 +26,7 @@
             }
         }
     }
-    ul {
+    p {
         opacity: 0;
         max-height: 0px;
         transform: scaleY(0);

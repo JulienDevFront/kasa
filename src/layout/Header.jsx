@@ -1,6 +1,6 @@
+import style from '../assets/styles/layout/Header.module.scss';
 import logo from '../assets/images/icons/logo-desktop.svg';
 import Nav from './Nav.jsx';
-import style from './Header.module.scss';
 
 export default function Header({displayNav}){
     return (

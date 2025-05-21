@@ -1,6 +1,6 @@
+import style from '../assets/styles/layout/Nav.module.scss';
 import { NavLink } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import style from './Nav.module.scss';
 
 export default function Nav(){
     const routes = [

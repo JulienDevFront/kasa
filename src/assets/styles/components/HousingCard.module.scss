@@ -1,8 +1,8 @@
-@use '../assets/styles/utils/colors.scss' as colors;
-@use '../assets/styles/utils/font-titles.scss' as font-titles;
+@use '../utils/colors.scss' as colors;
+@use '../utils/font-titles.scss' as font-titles;
 @use 'sass:map';
 
-.HouseCard {
+.HousingCard {
     position: relative;
     width: 100%;
     height: clamp(280px, 340px, 400px);

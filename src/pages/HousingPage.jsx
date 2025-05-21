@@ -1,10 +1,10 @@
-import style from './HousingPage.module.scss';
+import style from '../assets/styles/pages/HousingPage.module.scss';
 import HeroCarousel from '../components/HeroCarousel.jsx';
-import Slide from '../components/Slide.jsx';
-import TitleHousing from '../components/TitleHousing.jsx';
-import TagHousing from '../components/TagHousing.jsx';
-import OwnerProfilHousing from '../components/OwnerProfilHousing.jsx';
-import RatingScore from '../components/RatingScore.jsx';
+import Slide from '../components/HousingSlide.jsx';
+import TitleHousing from '../components/HousingTitle.jsx';
+import TagHousing from '../components/HousingTag.jsx';
+import OwnerProfilHousing from '../components/HousingProfile.jsx';
+import RatingScore from '../components/HousingRating.jsx';
 import Dropdown from '../components/Dropdown.jsx';
 import DropdownList from '../components/DropdownList.jsx';
 import { useParams } from 'react-router-dom';
