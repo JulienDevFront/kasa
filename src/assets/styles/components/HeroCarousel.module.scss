@@ -1,5 +1,6 @@
-@use '../utils/font-sizes.scss' as sizes;
 @use '../utils/colors.scss' as colors;
+@use '../utils/font-sizes.scss' as sizes;
+@use '../utils/media-queries.scss' as media-queries;
 @use 'sass:map';
 
 .HeroCarousel {
@@ -29,5 +30,27 @@
         .rightAction, .leftAction {
             padding: 24px;
         }
+        .rightAction img, .leftAction img {
+            width: 46px;
+        }
     }
-} 
+};
+
+@include media-queries.media-queries-mobile() {
+    .HeroCarousel {
+        height: 255px;
+        border-radius: 10px;
+        background: center;
+        .HeroCarousel__utils {
+            .positionCount {
+                display: none;
+            }
+            .rightAction, .leftAction {
+                    padding: 12px;
+            }
+            .rightAction img, .leftAction img {
+                width: 24px;
+            }
+        }
+    }
+};

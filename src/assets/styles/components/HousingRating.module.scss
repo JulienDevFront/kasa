@@ -1,3 +1,5 @@
+@use '../utils/media-queries.scss' as media-queries;
+
 .HousingRating {
     display: flex;
     justify-content: space-between;
@@ -8,4 +10,11 @@
         width: 24px;
         height: 24px;
     }
-}
+};
+
+@include media-queries.media-queries-mobile() {
+    .HousingRating img {
+        width: 18px;
+        height: 18px;
+    }
+};

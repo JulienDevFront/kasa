@@ -9,7 +9,7 @@ export default function Dropdown({title, text}){
 
     return (
         <article className={style.Dropdown} >
-            <div>
+            <header>
                 <h2>{title}</h2>
                 <img 
                     onClick={dropdownHandle} 
@@ -17,7 +17,7 @@ export default function Dropdown({title, text}){
                     src={arrowIcon}
                     alt={`Open to the descrition of ${title}`} 
                 />
-            </div>
+            </header>
             <p className={isOpen ? style.isVisible : ''}>
                 {text}
             </p>

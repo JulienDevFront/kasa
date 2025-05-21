@@ -1,5 +1,6 @@
-@use '../utils/font-titles.scss' as font-titles;
 @use '../utils/colors.scss' as colors;
+@use '../utils/font-titles.scss' as font-titles;
+@use '../utils/media-queries.scss' as media-queries;
 @use 'sass:map';
 
 .HousingTitle {
@@ -14,4 +15,17 @@
         font-weight: 500;
         font-size: map.get(font-titles.$title-desktop, '/housing-localize');
     }
-}
+};
+
+@include media-queries.media-queries-mobile() {
+    .HousingTitle {
+        h1 {
+            font-weight: 500;
+            font-size: map.get(font-titles.$title-mobile, '/housing-titleMain');
+            color: colors.$primary;
+        }
+        h2 {
+            font-size: map.get(font-titles.$title-mobile, '/housing-localize');
+        }
+    }
+};

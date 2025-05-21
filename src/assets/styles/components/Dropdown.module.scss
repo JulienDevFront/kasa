@@ -6,7 +6,7 @@
 
 .Dropdown {
     width: 100%;
-    div {
+    header {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -59,7 +59,7 @@
 };
 
 @include media-queries.media-queries-mobile() {
-    .Dropdown div {
+    .Dropdown header {
         padding: 10px;
         h2 {
             font-size: map.get(font-titles.$title-mobile, '/about-sections');

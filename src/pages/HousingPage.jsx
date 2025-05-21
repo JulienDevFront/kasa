@@ -19,18 +19,18 @@ export default function HousingPage() {
             <HeroCarousel>
                 {data.pictures.map((item) => <Slide key={item} img={item} alt={`Housing picture of ${data.title}`}/>)}
             </HeroCarousel>
-            <section>
-                <div className={style.HousingPage__titleAndTags}>
-                    <TitleHousing title={data.title} localize={data.location}/>
-                    <div className={style.HousingPage__titleAndTags__tags}>
-                        {data.tags.map((tag, index) => <TagHousing key={index} name={tag}/>)}
-                    </div>
+            <div className={style.HousingPage__ctn}>
+            <div className={style.HousingPage__ctn__titleAndTags}>
+                <TitleHousing title={data.title} localize={data.location}/>
+                <div>
+                    {data.tags.map((tag, index) => <TagHousing key={index} name={tag}/>)}
                 </div>
-                <div className={style.HousingPage__ownerAndRating}>
-                    <OwnerProfilHousing hostName={data.host.name} hostPicture={data.host.picture} />
-                    <RatingScore rating={data.rating}/>
-                </div>
-            </section>
+            </div>
+            <div className={style.HousingPage__ctn__ownerAndRating}>
+                <OwnerProfilHousing hostName={data.host.name} hostPicture={data.host.picture} />
+                <RatingScore rating={data.rating}/>
+            </div>
+            </div>
             <div className={style.HousingPage__descriptionAndEquipment}>
                 <Dropdown title='Description' text={data.description}/>
                 <DropdownList title='Équipements' lists={data.equipments}/>

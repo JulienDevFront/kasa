@@ -1,14 +1,22 @@
 @use '../utils/colors.scss' as colors;
 @use '../utils/font-titles.scss' as font-titles;
+@use '../utils/media-queries.scss' as media-queries;
 @use 'sass:map';
 
 .HousingTag {
-    width: 115px;
-    padding: 2px;
+    min-width: 115px;
+    padding: 2px 6px;
     border-radius: 10px;
     background-color: colors.$primary;
     text-align: center;
     font-weight: 700;
     font-size: map.get(font-titles.$title-desktop, '/housing-tags');
     color: map.get(colors.$monochrome, '100');
-}
+};
+
+@include media-queries.media-queries-mobile() {
+    .HousingTag{
+        min-width: 84px;
+        font-size: map.get(font-titles.$title-mobile, '/housing-tags');
+    }
+};

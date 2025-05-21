@@ -1,6 +1,7 @@
 @use '../utils/colors.scss' as colors;
 @use '../utils/font-sizes.scss' as sizes;
 @use '../utils/font-titles.scss' as font-titles;
+@use '../utils/media-queries.scss' as media-queries;
 @use 'sass:map';
 
 .DropdownList {
@@ -44,4 +45,28 @@
         transform: scaleY(1);
         transition: transform 0.4s ease-in-out, opacity 0.6s ease-in-out;
     }
-}
+};
+
+
+@include media-queries.media-queries-laptop() {
+    .DropdownList header h2{
+        font-size: sizes.$font-base;
+    }
+    .DropdownList .isVisible{
+        padding: 20px 1rem;
+        font-size: sizes.$font-sm;
+    }
+};
+
+@include media-queries.media-queries-mobile() {
+    .DropdownList header {
+        padding: 10px;
+        h2 {
+            font-size: map.get(font-titles.$title-mobile, '/about-sections');
+        }
+    }
+    .DropdownList .isVisible{
+        padding: 10px;
+        font-size: sizes.$font-2xs;
+    }
+};

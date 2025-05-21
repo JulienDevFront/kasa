@@ -1,10 +1,10 @@
-@use '../utils/font-titles.scss' as font-titles;
 @use '../utils/colors.scss' as colors;
+@use '../utils/font-titles.scss' as font-titles;
+@use '../utils/media-queries.scss' as media-queries;
 @use 'sass:map';
 
 .HousingProfile {
     display: flex;
-    justify-content: end;
     align-items: center;
     gap: 10px;
     h3 {
@@ -17,8 +17,21 @@
         }
     }
     img {
-        width: 64px;
-        height: 64px;
-        border-radius: 32px;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 4rem;
     }
-}
+};
+
+@include media-queries.media-queries-mobile() {
+    .HousingProfile {
+        h3 {
+            font-size: map.get(font-titles.$title-mobile, '/housing-owner');
+        }
+        img {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 2rem;
+        }
+    }
+};
