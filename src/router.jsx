@@ -4,10 +4,10 @@ import HomePage from "./pages/HomePage.jsx";
 import HousingPage from "./pages/HousingPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
-import { createBrowserRouter } from "react-router-dom";
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
+import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
     {
